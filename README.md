@@ -13,6 +13,10 @@ Nel repository sono presenti due distinti progetti: uno implementa il Front End 
 Per il suo funzionamento è necessario installare e configurare una versione di Keycloack nel seguente modo:
 
 Porta di esecuzione 9090
+
 Realm: cit-realm
+
 Client: cit-client
+
 Ruoli: cit-normal-user e cit-power-user
+
