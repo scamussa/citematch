@@ -1,0 +1,301 @@
+Started GET "/authors_by_name?query=camussa" for 127.0.0.1 at 2024-09-04 22:27:19 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:27:20 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/authors_by_namess?query=camussa" for 127.0.0.1 at 2024-09-04 22:28:32 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_namess"):
+  
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:28:32 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/authors_by_namess?query=camussa" for 127.0.0.1 at 2024-09-04 22:29:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_namess"):
+  
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:29:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 22:32:49 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | GC: 0.0ms)
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:32:49 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 22:37:59 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | GC: 0.0ms)
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:37:59 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 22:41:30 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | GC: 0.0ms)
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:41:30 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 22:42:04 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 6ms (Views: 0.3ms | GC: 0.0ms)
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:42:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 22:46:58 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 39ms (Views: 0.3ms | GC: 0.0ms)
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:46:58 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 22:47:56 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 32ms (Views: 0.5ms | GC: 0.0ms)
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:47:56 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 22:50:21 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 32ms (Views: 0.3ms | GC: 0.0ms)
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 22:50:21 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:13:48 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 799ms (Views: 0.2ms | GC: 0.0ms)
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 23:13:48 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:15:36 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 773ms (Views: 0.2ms | GC: 0.0ms)
+Started GET "/authors_by_name?query=John+Doe" for 127.0.0.1 at 2024-09-04 23:15:37 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/authors_by_name"):
+  
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:17:14 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 812ms (Views: 0.3ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:17:15 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:20:30 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 790ms (Views: 0.3ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:20:31 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:25:05 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 472ms (Views: 0.4ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:25:05 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:34:14 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 789ms (Views: 0.5ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:34:36 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 739ms (Views: 0.4ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:35:38 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 781ms (Views: 0.6ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:35:57 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 736ms (Views: 0.4ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:37:46 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 806ms (Views: 0.4ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-04 23:37:59 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 728ms (Views: 0.5ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-06 00:06:36 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 1267ms (Views: 0.7ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-06 00:06:38 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-06 00:07:43 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 1239ms (Views: 2.0ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-06 00:08:27 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 934ms (Views: 1.3ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-06 00:09:07 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 1028ms (Views: 0.7ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-09 23:35:13 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 1462ms (Views: 0.6ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-09 23:35:15 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-09 23:44:07 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 1391ms (Views: 0.6ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-09 23:44:09 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-10 12:56:36 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 1642ms (Views: 0.7ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-10 12:56:37 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-10 13:02:39 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 1231ms (Views: 0.9ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-10 13:02:41 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.2ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-10 13:07:22 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 1192ms (Views: 0.5ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-10 13:07:23 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | GC: 0.0ms)
+[dotenv] Set [36mKEYCLOACK_CLIENT_SECRET[0m and [36mSCHOLAR_API_KEY[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Saved a snapshot of [32mENV[0m
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-10 14:39:29 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Completed 200 OK in 1343ms (Views: 0.8ms | GC: 0.0ms)
+Started GET "/author/search?query=camussa" for 127.0.0.1 at 2024-09-10 14:39:31 +0200
+Processing by AuthorController#get_authors_by_name as HTML
+  Parameters: {"query"=>"camussa"}
+Filter chain halted as :authenticate_request! rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | GC: 0.0ms)

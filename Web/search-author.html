@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CiteMatch</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style_copy.css" type="text/css">
+</head>
+
+<body>
+    <div id="notification" class="notification hidden">
+        <span id="notification-text"></span>
+        <button id="close-btn" class="close-btn">&times;</button>
+    </div>
+    <!-- Hamburger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="img/logo.png" alt="" style="width: 70%; height: 70%;"></a>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="./index.html">Home</a></li>
+                <li><a href="./search-author.html">Search Author</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="header__top__right__social">
+            <i id="user-name-hamb">User</i>
+            <i>-</i>
+            <i id="user-role-hamb">Role</i>
+        </div>
+        <div class="humberger__menu__contact">
+            <ul>
+                <li><i class="fa fa-envelope"></i> sara.camussa@gmail.com</li>
+                <li>Laboratorio di Applicazioni Software e Sicurezza Informatica 2023/2024</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Hamburger End -->
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                                <li><i class="fa fa-envelope"></i> sara.camussa@gmail.com</li>
+                                <li>Laboratorio di Applicazioni Software e Sicurezza Informatica 2023/2024</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <i id="user-name">User</i>
+                                <i>-</i>
+                                <i id="user-role">Role</i>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="./index.html"><img src="img/logo.png" style="width: 70%; height: 70%;" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Home</a></li>
+                            <li><a href="./search-author.html">Search Author</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="humberger__open">
+            <i class="fa fa-bars"></i>
+        </div>
+    </header>
+    <!-- Header Section End -->
+    <!-- Form Data Begin-->
+    <section class="searchauthor">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Search Authors</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <form id="searchform">
+                <div class="row col-lg-12 col-md-6">
+                    <div class="col-lg-10">
+                        <div class="searchauthor__input">
+                            <input type="text" id="author" placeholder="">
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="searchauthor__input">
+                            <button type="submit" class="searchauthor_button" id="fetchDataBtn">Search</button>
+                        </div>
+                    </div>                   
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- Form Date End-->
+    <!-- Search Result Begin-->
+
+    <section class="author-list">
+        <div class="container" id="search-result-container">
+            <div id="preloaderTable" class="preloader">
+                <div id="loaderTable" class="loader"></div>
+            </div>
+            <div class="row citematch__value">
+                <div class="col-lg-12 citematch__value__table">
+                    <table class="table" id="author-table">
+                        <thead>
+                            <tr id="author-header">
+                                <th>Author Id</th>  
+                                <th>Name</th>
+                                <th>Papers Count</th>
+                                <th>Citations Count</th>
+                            </tr>
+                        </thead>
+                        <tbody id="author-body">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row pagination-controls">
+                <div class="col-lg-12 text-center">
+                    <p id="pagination-info"></p>
+                </div>
+                <div class="col-lg-12 text-center">
+                    <div class="pagination-container">
+                        <button id="prev-page" class="pagination-button" disabled>Previous</button>
+                        <p class="page-info" id="page-number">Page: 1</p>
+                        <button id="next-page" class="pagination-button">Next</button>
+                    </div>
+                </div>
+            </div>           
+        </div>
+    </section>   
+  
+    <!-- Search Result End-->
+    <!-- Footer Section Begin -->
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="./index.html"><img src="img/logo.png" style="width: 70%; height: 70%;" alt=""></a>
+                        </div>
+                        <ul>
+                            <li>Name: Sara Camussa</li>
+                            <li>Phone: +39 366 166 98 09</li>
+                            <li>Email: sara.camussa@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Useful Links</h6>
+                        <ul>
+                            <li><a href="http://localhost:8080/citations/swagger/dist/index.html">Swagger Documentation</a></li>
+                            <li><a href="https://api.semanticscholar.org/api-docs/">Semantich Scholar API</a></li>
+                            <li><a href="https://opencitations.net/querying">Open Citations API</a></li>
+                            <li><a href="./contact.html">About Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                            <p>
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="https://cdn.jsdelivr.net/npm/keycloak-js@25.0.4/dist/keycloak.min.js"></script>
+    <script src="js/keycloack-config.js"></script>     
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/search-author.js"></script>
+
+
+</body>
+</html>
+
+
+

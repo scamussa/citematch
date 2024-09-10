@@ -1,0 +1,328 @@
+openapi: 3.0.0
+info:
+  title: Author API
+  description: API per cercare autori e articoli
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+paths:
+  /author/search:
+    get:
+      summary: Cerca autori
+      description: Restituisce una lista di autori basata sulla query di ricerca e la pagina.
+      parameters:
+        - name: query
+          in: query
+          description: Il termine di ricerca per gli autori.
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          description: Il numero della pagina dei risultati.
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Risultato della ricerca degli autori
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Authors:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                        example: 5
+                      page:
+                        type: string
+                        example: '1'
+                      total_pages:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                              example: "N. Camussa"
+                            author_id:
+                              type: string
+                              example: "16034840"
+                            paper_count:
+                              type: integer
+                              example: 2
+                            citation_count:
+                              type: integer
+                              example: 0
+                            home_page:
+                              type: string
+                              example: ""
+                            url:
+                              type: string
+                              example: "https://www.semanticscholar.org/author/16034840"
+                  status:
+                    type: string
+                    example: "ok"
+
+  /author/{author_id}/publication:
+    get:
+      summary: Ottieni pubblicazioni di un autore
+      description: Restituisce una lista di pubblicazioni basate sull'ID dell'autore.
+      parameters:
+        - name: author_id
+          in: path
+          description: ID dell'autore di cui ottenere le pubblicazioni.
+          required: true
+          schema:
+            type: string
+        - name: page
+          in: query
+          description: Il numero della pagina dei risultati.
+          required: false
+          schema:
+            type: integer
+            default: 1
+      responses:
+        '200':
+          description: Risultato delle pubblicazioni dell'autore
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Publications:
+                    type: object
+                    properties:
+                      total:
+                        type: integer
+                        example: 10
+                      page:
+                        type: integer
+                        example: 1
+                      total_pages:
+                        type: integer
+                        example: 1
+                      data:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            paper_id:
+                              type: string
+                              example: "b0216e0c01b6c9860037fd9833a26a4e26c1d5d5"
+                            title:
+                              type: string
+                              example: "Example Paper Title"
+                            year:
+                              type: integer
+                              example: 2021
+                            citation_count:
+                              type: integer
+                              example: 5
+                            url:
+                              type: string
+                              example: "https://example.com/paper/123456"
+                  status:
+                    type: string
+                    example: "ok"
+        '404':
+          description: Autore non trovato
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "error"
+                  message:
+                    type: string
+                    example: "Autore non trovato"
+
+  /author/{author_id}:
+    get:
+      summary: Ottieni informazioni su un autore
+      description: Ritorna i dettagli di un autore specifico tramite il suo `author_id`.
+      parameters:
+        - name: author_id
+          in: path
+          required: true
+          description: L'ID univoco dell'autore
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Dettagli dell'autore restituiti correttamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Author:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        description: Nome dell'autore
+                        example: N. Camussa
+                      author_id:
+                        type: string
+                        description: ID dell'autore
+                        example: "16034840"
+                      paper_count:
+                        type: integer
+                        description: Numero di articoli pubblicati dall'autore
+                        example: 2
+                      citation_count:
+                        type: integer
+                        description: Numero di citazioni degli articoli dell'autore
+                        example: 0
+                      home_page:
+                        type: string
+                        description: Homepage dell'autore
+                        example: ""
+                      url:
+                        type: string
+                        description: URL del profilo dell'autore
+                        example: "https://www.semanticscholar.org/author/16034840"
+                  status:
+                    type: string
+                    description: Stato della risposta
+                    example: ok
+        '404':
+          description: Autore non trovato
+        '500':
+          description: Errore del server
+
+  /paper/{doi}/citations:
+    get:
+      summary: Ottieni le citazioni di un articolo
+      description: Ritorna una lista di citazioni di un articolo specifico tramite il suo DOI.
+      parameters:
+        - name: doi
+          in: path
+          required: true
+          description: Il DOI dell'articolo per cui si vogliono ottenere le citazioni
+          schema:
+            type: string
+            example: "10.3109/15563659109038613"
+      responses:
+        '200':
+          description: Lista delle citazioni dell'articolo
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    paper_id:
+                      type: string
+                      description: DOI dell'articolo
+                      example: "doi:10.3109/15563659109038613"
+                    citation_id:
+                      type: string
+                      description: ID della citazione
+                      example: "5081f62d5d4031d9bc6387b087edd3d5ec7d14c8"
+                    doi:
+                      type: string
+                      description: DOI della citazione
+                      example: "doi:10.1002/EM.2850250405"
+                    title:
+                      type: string
+                      description: Titolo della citazione
+                      example: "Genotoxicity of two arsenic compounds in germ cells and somatic cells of Drosophila melanogaster"
+                    authors:
+                      type: string
+                      description: Autori della citazione
+                      example: "P. Ramos‐Morales, R. Rodríguez-Arnaiz"
+                    year:
+                      type: integer
+                      description: Anno di pubblicazione
+                      example: 1995
+                    is_scholar_citation:
+                      type: string
+                      description: Indica se è una citazione scholar
+                      example: "yes"
+                    is_open_citation:
+                      type: string
+                      description: Indica se la citazione è open
+                      example: "no"
+                    can_be_added_to_scholar:
+                      type: string
+                      description: Indica se la citazione può essere aggiunta a Scholar
+                      example: "no"
+        '404':
+          description: Articolo non trovato
+        '500':
+          description: Errore del server
+
+  /paper/{doi}:
+    get:
+      summary: Ottieni informazioni su un articolo
+      description: Ritorna i dettagli di un articolo specifico tramite il suo DOI.
+      parameters:
+        - name: doi
+          in: path
+          required: true
+          description: Il DOI dell'articolo per cui si vogliono ottenere informazioni
+          schema:
+            type: string
+            example: "10.3109/15563659109038613"
+      responses:
+        '200':
+          description: Dettagli dell'articolo restituiti correttamente
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  Paper:
+                    type: object
+                    properties:
+                      author_id:
+                        type: string
+                        description: ID dell'autore dell'articolo (se disponibile)
+                        example: "n/d"
+                      paper_id:
+                        type: string
+                        description: ID univoco dell'articolo
+                        example: "8679091f253fa6e05a99787a7c830808b5a7f412"
+                      title:
+                        type: string
+                        description: Titolo dell'articolo
+                        example: "Mass poisoning by sodium arsenite."
+                      year:
+                        type: integer
+                        description: Anno di pubblicazione dell'articolo
+                        example: 1991
+                      other_authors:
+                        type: string
+                        description: Altri autori dell'articolo
+                        example: "O. Roses, J. G. García Fernández, E. Villaamil, N. Camussa, S. Minetti, M. Martínez de Marco, P. N. Quiroga, P. Rattay, A. Sassone, G. Valle"
+                      doi:
+                        type: string
+                        description: DOI dell'articolo
+                        example: "10.3109/15563659109038613"
+                      citation_count:
+                        type: integer
+                        description: Numero di citazioni ricevute dall'articolo
+                        example: 17
+                      tldr:
+                        type: string
+                        description: Breve riassunto del contenuto dell'articolo
+                        example: "Symptomatology increased with the urine arsenic with increased diarrhea, vomiting and systemic symptoms at urine arsenic greater than 75 micrograms/dL."
+                  status:
+                    type: string
+                    description: Stato della risposta
+                    example: "ok"
+        '404':
+          description: Articolo non trovato
+        '500':
+          description: Errore del server
