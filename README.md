@@ -10,5 +10,5 @@ CiteMatch è una Web Application che mette a confronto le citazioni di articoli 
 
 Nel repository sono presenti due distinti progetti: uno implementa il Front End e l'altro le API REST del Back End
 
-Per il suo funzionamento è necessario installare e configurare una versione di Keycloack (si veda documentazione)
+Per il  funzionamento dell'applicazione è necessario installare e configurare una versione di Keycloack (si veda documentazione)
 
